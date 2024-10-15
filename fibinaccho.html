@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>Fibonacci Sequence</title>
+  <script type="text/javascript">
+    function generateFibonacci() {
+      const n = document.getElementById("n").value;
+      let fibSeq = [0, 1];
+      let result = "";
+    
+      for (let i = 2; i < n; i++) {
+        fibSeq.push(fibSeq[i-1] + fibSeq[i-2]);
+      }
+    
+      result += "Fibonacci Sequence up to " + n + " terms: ";
+      for (let i = 0; i < n; i++) {
+        result += fibSeq[i] + " ";
+      }
+    
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
+</head>
+<body>
+  <h1>Fibonacci Sequence</h1>
+  <input type="number" id="n" value="10">
+  <button onclick="generateFibonacci()">Generate Fibonacci Sequence</button>
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+</html>
